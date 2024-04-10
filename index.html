@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/root.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <title>MyCodePy</title>
+</head>
+<body>
+  <section id="banner">
+    <div class="container">
+      <div class="min-container">
+        MyCodePy
+        <i class='bx bx-code-alt'></i>
+      </div>
+    </div>
+  </section>
+  <section id="code_area" class="padding">
+    <div class="center-title">All Python Codes Here</div>
+    <div class="my-codes">
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            total_parcial = 0
+
+            resp = 's'
+            while True:
+              match resp:
+                case 's':
+                  produto = str(input('Informe o nome: '))
+                  preco = float(input(f'Informe o preço do {produto}: '))
+                  total_parcial += preco
+            
+                  if total_parcial > 50:
+                    print('Valor excedido. Tente novamente!')
+                    total_parcial = total_parcial - preco
+                    break
+                  else:
+                    print(f'Total: {total_parcial}')
+                case 'n':
+                  break
+                case _:
+                  print('Informe s ou n para continuar.')
+            
+              request = str(input('\nAdd mais produtos [s/n]: '))
+              if request != 's'.lower():
+                break
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            total_parcial = 0
+
+            resp = 's'
+            while True:
+              match resp:
+                case 's':
+                  produto = str(input('Informe o nome: '))
+                  preco = float(input(f'Informe o preço do {produto}: '))
+                  total_parcial += preco
+            
+                  if total_parcial > 50:
+                    print('Valor excedido. Tente novamente!')
+                    total_parcial = total_parcial - preco
+                    break
+                  else:
+                    print(f'Total: {total_parcial}')
+                case 'n':
+                  break
+                case _:
+                  print('Informe s ou n para continuar.')
+            
+              request = str(input('\nAdd mais produtos [s/n]: '))
+              if request != 's'.lower():
+                break
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            # Questão 1
+            number_quantity = int(input('Quantos números desejas: '))
+
+            positiveNumbers = 0
+            negativeNumbers = 0
+            count = 0
+
+            while (count < number_quantity):
+              number = int(input('Insere um número: '))
+              if number > 0:
+                positiveNumbers += 1
+              elif number < 0:
+                negativeNumbers -= 1
+              count = count + 1
+
+            print(f'Quantidade de números positivos: {positiveNumbers}')
+            print(f'Quantidade de números negativos: {negativeNumbers}')
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            # Questão 1
+            number_quantity = int(input('Quantos números desejas: '))
+
+            positiveNumbers = 0
+            negativeNumbers = 0
+            count = 0
+
+            while (count menor que number_quantity):
+              number = int(input('Insere um número: '))
+              if number > 0:
+                positiveNumbers += 1
+              elif number menor que 0:
+                negativeNumbers -= 1
+              count = count + 1
+
+            print(f'Quantidade de números positivos: {positiveNumbers}')
+            print(f'Quantidade de números negativos: {negativeNumbers}')
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            # Questão 2
+
+            numero = float(input('Informe um número: '))
+
+            match numero:
+              case condicao1 if numero > 0:
+                print(f'{numero} é maior que zero!')
+              case condicao2 if numero < 0:
+                print(f'{numero} é menor que zero!')
+              case condicao3 if numero == 0:
+                print(f'{numero} é neutro! Igual a zero.')
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            # Questão 2
+
+            numero = float(input('Informe um número: '))
+
+            match numero:
+              case condicao1 if numero > 0:
+                print(f'{numero} é maior que zero!')
+              case condicao2 if numero menor que 0:
+                print(f'{numero} é menor que zero!')
+              case condicao3 if numero == 0:
+                print(f'{numero} é neutro! Igual a zero.')
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            # Questão 3
+
+            numero1 = float(input('Informe o primeiro número: '))
+            numero2 = float(input('Informe o segundo número: '))
+
+            menor_numero = numero1, numero2
+
+            match menor_numero:
+              case condicao1 if numero1 < numero2:
+                menor_numero = numero1
+                print(f'Maior deles: {menor_numero}')
+              case condicao2 if numero2 < numero1:
+                menor_numero = numero2
+                print(f'Menor deles: {menor_numero}')
+              case _:
+                print('São iguais!')
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            # Questão 3
+
+            numero1 = float(input('Informe o primeiro número: '))
+            numero2 = float(input('Informe o segundo número: '))
+
+            menor_numero = numero1, numero2
+
+            match menor_numero:
+              case condicao1 if numero1 menor que numero2:
+                menor_numero = numero1
+                print(f'Maior deles: {menor_numero}')
+              case condicao2 if numero2 menor que numero1:
+                menor_numero = numero2
+                print(f'Menor deles: {menor_numero}')
+              case _:
+                print('São iguais!')
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            # Questão 4
+
+            preco1 = float(input('Informe o primeiro preço: '))
+            preco2 = float(input('Informe o segundo preço: '))
+            preco3 = float(input('Informe o terceiro preço: '))
+
+            nao_DeveComprar = (preco1, preco2, preco3)
+
+            match nao_DeveComprar:
+              case (preco1, preco2, preco3) if preco1 > preco2 and preco1 > preco3:
+                nao_DeveComprar = preco1
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+              case (preco1, preco2, preco3) if preco2 > preco1 and preco2 > preco3:
+                nao_DeveComprar = preco2
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+              case (preco1, preco2, preco3) if preco3 > preco1 and preco3 > preco2:
+                nao_DeveComprar = preco3
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            # Questão 4
+
+            preco1 = float(input('Informe o primeiro preço: '))
+            preco2 = float(input('Informe o segundo preço: '))
+            preco3 = float(input('Informe o terceiro preço: '))
+
+            nao_DeveComprar = (preco1, preco2, preco3)
+
+            match nao_DeveComprar:
+              case (preco1, preco2, preco3) if preco1 > preco2 and preco1 > preco3:
+                nao_DeveComprar = preco1
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+              case (preco1, preco2, preco3) if preco2 > preco1 and preco2 > preco3:
+                nao_DeveComprar = preco2
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+              case (preco1, preco2, preco3) if preco3 > preco1 and preco3 > preco2:
+                nao_DeveComprar = preco3
+                print(f'Não deve comprar: R$ {round(nao_DeveComprar, 2)}')
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">Python Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea readonly="" name="code" id="code" class="area">
+            # Questão 5
+
+            industria = 'The Industry of Life LTDA'
+
+            indice = 0.5
+            notificacao = indice
+
+            if notificacao >= 0.3 and notificacao <= 0.4:
+              print('Reduz a emisão de poluição!')
+            else:
+              print('Suspenda suas atividades!')
+            </textarea
+          >
+          <footer>
+            <button class="ui-btn">
+              <span>
+                View code
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <pre><code id="popup-code" class="language-css">
+            # Questão 5
+
+            industria = 'The Industry of Life LTDA'
+
+            indice = 0.5
+            notificacao = indice
+
+            if notificacao >= 0.3 and notificacao menor e = 0.4:
+              print('Reduz a emisão de poluição!')
+            else:
+              print('Suspenda suas atividades!')
+          </code></pre>
+        </div>
+        <button id="close-popup" class="close-popup">Close</button>
+      </div>
+    </div>
+  </section>
+  <script src="./js/main.js"></script>
+</body>
+</html>
