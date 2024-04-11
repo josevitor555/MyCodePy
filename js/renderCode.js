@@ -1,4 +1,5 @@
-import cardsData from "./cards";
+import { cardsData } from "./cards";
+import { sinopseData } from "./cards";
 
 document.addEventListener("DOMContentLoaded", function () {
   const codeContainer = document.getElementById("codeContainer");
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.style.margin = '10px';
     button.addEventListener("click", function () {
       document.getElementById("popup-code").textContent = data.code;
+      displayCodeExplanation(data.title);
       document.getElementById("popup-container").style.display = "flex";
     });
     card.appendChild(button);
@@ -64,6 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const card = createCard(data);
     codeContainer.appendChild(card);
   });
+
+  function displayCodeExplanation(title) {
+    const explanation = sinopseData[title];
+
+    document.getElementById('explanation').textContent = explanation;
+  }
 
   document.getElementById("close-popup").addEventListener("click", function () {
     document.getElementById("popup-container").style.display = "none";
