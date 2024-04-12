@@ -41,27 +41,13 @@
   background-size: 30px 30px;
   background-position: -5px -5px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#banner .container .min-container {
-  font-size: 12rem;
-  color: var(--main-title);
-  padding: 1rem 2rem;
-  background: #2b2b2b;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-#banner .container .min-container img {
-  width: 12rem;
-  margin-left: 4rem;
-  cursor: pointer;
-}
-
-#banner .container .min-container .min-header {
-  width: 100%;
+#banner .container .min-header {
+  width: 50%;
   height: 4rem;
   padding: 4rem;
   margin-bottom: 2rem;
@@ -71,10 +57,31 @@
   border-radius: 2rem;
 }
 
-#banner .container .min-container .min-header h4 {
-  font-size: 1.6rem;
+#banner .container .min-header h4 {
+  font-size: 1.4rem;
   font-weight: 500;
   color: #222224;
+}
+
+#banner .container .min-container {
+  padding: 1rem 2rem;
+  background: #2b2b2b;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner .container .min-container h2 {
+  font-size: 6rem;
+  color: var(--main-title);
+}
+
+#banner .container .min-container img {
+  width: 12rem;
+  margin-left: 4rem;
+  cursor: pointer;
 }
 
 #code_area {
@@ -233,7 +240,7 @@
   max-width: 800px;
   max-height: 600px;
   overflow-y: auto;
-  background: #31363F;
+  background: #FAFAFA;
   padding: 20px;
   border-radius: 10px;
   font-size: 1.4rem;
@@ -245,7 +252,7 @@
 
 .popup-content .header-popup {
   padding: 1.2rem 2rem;
-  background: #3c414d;
+  background: #2c2c2e;
   border-radius: 1rem;
   margin-bottom: 1rem;
   display: flex;

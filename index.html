@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="./css/prism-light.css">
 
   <title>MyCodePy</title>
 </head>
@@ -17,13 +17,13 @@
   
   <section id="banner">
     <div class="container">
+      <div class="min-header">
+        <h4>
+          Made by a student at the Federal Institute of Piauí, Brazil. Studying Systems Analysis and Development. My email: josevitordesousa123@gmail.com
+        </h4>
+      </div>
       <div class="min-container">
-        <div class="min-header">
-          <h4>
-            Made by a student at the Federal Institute of Piauí, Brazil. Studying Systems Analysis and Development.
-          </h4>
-        </div>
-        <span> MyCodePy </span>
+        <h2> MyCodePy </h2>
         <a href="https://www.wikiwand.com/pt/Python" target="_blank">
           <img src="./images/python_logo.png" alt="Python logo not found">
         </a>
@@ -48,7 +48,7 @@
            </button>
         </div>
         <pre>
-          <code id="popup-code" class="language-python"></code>
+          <code id="popup-code" class="language-py"></code>
         </pre>
         <div class="explanation-code">
           <h2>Purpose of the code</h2>
@@ -66,7 +66,6 @@
   <script type="module" src="./js/renderCode.js"></script>
   <script type="module" src="./js/cards.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script src="./js/prism-light.js"></script>
 </body>
 </html>

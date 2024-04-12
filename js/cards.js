@@ -43,9 +43,9 @@ export const cardsData = [
     
     match numero:
       case condicao1 if numero > 0:
-        print(f'{numero} é maior que zero!')
+        print(f'{numero} > zero!')
       case condicao2 if numero < 0:
-        print(f'{numero} é menor que zero!')
+        print(f'{numero} < zero!')
       case condicao3 if numero == 0:
         print(f'{numero} é neutro! Igual a zero.')`,
   },
